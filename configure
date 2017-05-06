@@ -1,0 +1,70 @@
+#!/usr/bin/ruby
+require 'fileutils'
+
+def prompt_for_variable(variable, default)
+  puts "Please enter a value for #{variable} (default: \"#{default}\")"
+  answer = gets.chomp
+  answer.length > 0 ? answer : default
+end
+
+def replace_variables_in_files(substitutions)
+  Dir.glob("**/*") do |file_name|
+    next if File.directory?(file_name)
+
+    text = ''
+    File.open(file_name, 'rb') do |file|
+      text = file.read
+      substitutions.each do |old, new|
+        text.gsub!(old, new)
+      end
+    end
+    File.open(file_name, 'wb') do |file|
+      file.write(text)
+    end
+  end
+end
+
+def replace_variables_in_file_names(substitutions)
+  Dir.foreach('.') do |file_name|
+    next if file_name == '.' or file_name == '..'
+    new_file_name = file_name.clone
+    substitutions.each do |old, new|
+      new_file_name.gsub!(old, new)
+    end
+    if new_file_name != file_name
+      FileUtils.mv file_name, new_file_name
+    end
+    if File.directory?(new_file_name)
+      Dir.chdir(new_file_name) do
+        replace_variables_in_file_names(substitutions)
+      end
+    end
+  end
+end
+
+
+##
+## MAIN
+##
+
+substitutions = {
+  'PROJECTNAME' => 'MyProject',
+  'ORGANIZATIONNAME' => 'BreadTrip',
+  'ORGANIZATIONIDENTIFIER' => 'com.breadtrip',
+  'AUTHORNAME' => 'Tongtong Xu',
+  'TODAYDATE' => '2017-05-01',
+  'TODAYYEAR' => '2017'
+}
+substitutions.each do |variable, default|
+  substitutions[variable] = prompt_for_variable(variable, default)
+end
+
+Dir.chdir File.dirname(__FILE__)
+FileUtils.mkdir_p 'OUTPUT'
+FileUtils.cp_r 'PROJECTNAME', 'OUTPUT/'
+Dir.chdir 'OUTPUT/'
+
+replace_variables_in_files(substitutions)
+replace_variables_in_file_names(substitutions)
+
+puts "DONE, your project is now ready to use in the OUTPUT/ folder"
