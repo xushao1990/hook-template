@@ -10,6 +10,9 @@
 		7B62677F1EBC88BA00316379 /* PROJECTNAMEPATCH.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B62677D1EBC88BA00316379 /* PROJECTNAMEPATCH.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B6267821EBC88BA00316379 /* PROJECTNAMEPATCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B62677B1EBC88BA00316379 /* PROJECTNAMEPATCH.framework */; };
 		7B6267831EBC88BA00316379 /* PROJECTNAMEPATCH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B62677B1EBC88BA00316379 /* PROJECTNAMEPATCH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7B6267C41EBE033D00316379 /* Tester.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6267C21EBE033D00316379 /* Tester.h */; };
+		7B6267C51EBE033D00316379 /* Tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6267C31EBE033D00316379 /* Tester.m */; };
+		7B6267C71EBE039500316379 /* PROJECTNAMEPATCH.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6267C61EBE039500316379 /* PROJECTNAMEPATCH.storyboard */; };
 		7BE8B2861EBC580200B01A62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B2851EBC580200B01A62 /* main.m */; };
 		7BE8B2891EBC580200B01A62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B2881EBC580200B01A62 /* AppDelegate.m */; };
 		7BE8B28C1EBC580200B01A62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8B28B1EBC580200B01A62 /* ViewController.m */; };
@@ -46,6 +49,9 @@
 		7B62677B1EBC88BA00316379 /* PROJECTNAMEPATCH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECTNAMEPATCH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B62677D1EBC88BA00316379 /* PROJECTNAMEPATCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJECTNAMEPATCH.h; sourceTree = "<group>"; };
 		7B62677E1EBC88BA00316379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6267C21EBE033D00316379 /* Tester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tester.h; sourceTree = "<group>"; };
+		7B6267C31EBE033D00316379 /* Tester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tester.m; sourceTree = "<group>"; };
+		7B6267C61EBE039500316379 /* PROJECTNAMEPATCH.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PROJECTNAMEPATCH.storyboard; sourceTree = "<group>"; };
 		7BE8B2811EBC580200B01A62 /* PROJECTNAME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECTNAME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE8B2851EBC580200B01A62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7BE8B2871EBC580200B01A62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -84,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				7B62677D1EBC88BA00316379 /* PROJECTNAMEPATCH.h */,
+				7B6267C21EBE033D00316379 /* Tester.h */,
+				7B6267C31EBE033D00316379 /* Tester.m */,
+				7B6267C61EBE039500316379 /* PROJECTNAMEPATCH.storyboard */,
 				7B62677E1EBC88BA00316379 /* Info.plist */,
 			);
 			path = PROJECTNAMEPATCH;
@@ -150,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B62677F1EBC88BA00316379 /* PROJECTNAMEPATCH.h in Headers */,
+				7B6267C41EBE033D00316379 /* Tester.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +219,6 @@
 					};
 					7BE8B2801EBC580200B01A62 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2E728EA35C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -238,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6267C71EBE039500316379 /* PROJECTNAMEPATCH.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6267C51EBE033D00316379 /* Tester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2E728EA35C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PROJECTNAME/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ORGANIZATIONIDENTIFIER.PROJECTNAME;
@@ -467,7 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2E728EA35C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PROJECTNAME/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ORGANIZATIONIDENTIFIER.PROJECTNAME;
