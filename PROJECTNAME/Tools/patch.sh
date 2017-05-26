@@ -40,7 +40,7 @@ ExecutableFileName=$(/usr/libexec/PlistBuddy -c "Print CFBundleExecutable " $TEM
 
 echo $ExecutableFileName
 
-${SRCROOT}/Tools/restore-symbol $TEMP_APP_PATH/SanGuoGuaJi
+${SRCROOT}/Tools/restore-symbol $TEMP_APP_PATH/$ExecutableFileName
 
 # ---------------------------------------------------
 # 2. Overwrite DummyApp IPA with Target App Contents
